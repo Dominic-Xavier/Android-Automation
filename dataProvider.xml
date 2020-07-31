@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name = "Financial app">
+
+	<test name = "Financial Manager" enabled = "true">
+	<parameter name = "Username" value = "Dominic"/>
+	<parameter name = "Password" value = "Xavier"/>
+	<parameter name = "userName" value = "Xavier Rocks"/>
+	<parameter name = "passWord" value = "Dominic"/>
+	<parameter name = "Repass" value = "Dominic"/>
+	<parameter name = "Mobile_num" value = "9600066074"/>
+	<parameter name="Option" value="expense"/>
+	<parameter name = "noOfRows" value = "3"/>
+	<parameter name = "Exp_Description" value = "Dress;;Food;;Petrol"/>
+	<parameter name = "Exp_Amount" value = "1200;;600;;500"/>
+		<classes>
+			<class name = "com.finance.FinancialManager"/>
+		</classes>
+		
+	</test>
+</suite>
