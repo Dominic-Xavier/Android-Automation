@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="1" failed="2" ignored="0" total="6" passed="3">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Financial app" duration-ms="112481" started-at="2020-07-31T10:08:04 IST" finished-at="2020-07-31T10:09:57 IST">
+    <groups>
+    </groups>
+    <test name="Register" duration-ms="41588" started-at="2020-07-31T10:08:04 IST" finished-at="2020-07-31T10:08:46 IST">
+      <class name="com.finance.FinancialManager">
+        <test-method status="PASS" signature="openApp()[pri:0, instance:com.finance.FinancialManager@536aaa8d]" name="openApp" is-config="true" duration-ms="7230" started-at="2020-07-31T10:08:04 IST" finished-at="2020-07-31T10:08:12 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openApp -->
+        <test-method status="PASS" signature="register(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:-1, instance:com.finance.FinancialManager@536aaa8d]" name="register" duration-ms="34294" started-at="2020-07-31T10:08:12 IST" finished-at="2020-07-31T10:08:46 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Xavier Rocks]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Dominic]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Dominic]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[9600066074]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- register -->
+        <test-method status="FAIL" signature="login(java.lang.String, java.lang.String)[pri:1, instance:com.finance.FinancialManager@536aaa8d]" name="login" duration-ms="0" started-at="2020-07-31T10:08:46 IST" finished-at="2020-07-31T10:08:46 IST">
+          <exception class="org.testng.TestNGException">
+            <message>
+              <![CDATA[
+Parameter 'Username' is required by @Test on method login but has not been marked @Optional or defined
+in C:\Users\91960\eclipse-workspace\com.FinancialMaganer\dataProvider.xml]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.testng.TestNGException: 
+Parameter 'Username' is required by @Test on method login but has not been marked @Optional or defined
+in C:\Users\91960\eclipse-workspace\com.FinancialMaganer\dataProvider.xml
+at org.testng.internal.Parameters.createParams(Parameters.java:272)
+at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:360)
+at org.testng.internal.Parameters.createParameters(Parameters.java:704)
+at org.testng.internal.Parameters.handleParameters(Parameters.java:879)
+at org.testng.internal.Parameters.handleParameters(Parameters.java:744)
+at org.testng.internal.ParameterHandler.handleParameters(ParameterHandler.java:59)
+at org.testng.internal.ParameterHandler.createParameters(ParameterHandler.java:38)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:783)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.util.ArrayList.forEach(ArrayList.java:1257)
+at org.testng.TestRunner.privateRun(TestRunner.java:766)
+at org.testng.TestRunner.run(TestRunner.java:587)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
+at org.testng.SuiteRunner.run(SuiteRunner.java:286)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1187)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1109)
+at org.testng.TestNG.runSuites(TestNG.java:1039)
+at org.testng.TestNG.run(TestNG.java:1007)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.testng.TestNGException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- login -->
+        <test-method status="SKIP" signature="expenses(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:2, instance:com.finance.FinancialManager@536aaa8d]" name="expenses" duration-ms="0" started-at="2020-07-31T10:08:46 IST" depends-on-methods="com.finance.FinancialManager.login" finished-at="2020-07-31T10:08:46 IST">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method FinancialManager.expenses(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:2, instance:com.finance.FinancialManager@536aaa8d] depends on not successfully finished methods]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method FinancialManager.expenses(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:2, instance:com.finance.FinancialManager@536aaa8d] depends on not successfully finished methods
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:101)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.util.ArrayList.forEach(ArrayList.java:1257)
+at org.testng.TestRunner.privateRun(TestRunner.java:766)
+at org.testng.TestRunner.run(TestRunner.java:587)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
+at org.testng.SuiteRunner.run(SuiteRunner.java:286)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1187)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1109)
+at org.testng.TestNG.runSuites(TestNG.java:1039)
+at org.testng.TestNG.run(TestNG.java:1007)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- expenses -->
+        <test-method status="PASS" signature="app_complete()[pri:0, instance:com.finance.FinancialManager@536aaa8d]" name="app_complete" is-config="true" duration-ms="0" started-at="2020-07-31T10:08:46 IST" finished-at="2020-07-31T10:08:46 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- app_complete -->
+      </class> <!-- com.finance.FinancialManager -->
+    </test> <!-- Register -->
+    <test name="Login" duration-ms="70868" started-at="2020-07-31T10:08:46 IST" finished-at="2020-07-31T10:09:57 IST">
+      <class name="com.finance.FinancialManager">
+        <test-method status="PASS" signature="openApp()[pri:0, instance:com.finance.FinancialManager@7e2d773b]" name="openApp" is-config="true" duration-ms="7368" started-at="2020-07-31T10:08:46 IST" finished-at="2020-07-31T10:08:53 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openApp -->
+        <test-method status="FAIL" signature="register(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:-1, instance:com.finance.FinancialManager@7e2d773b]" name="register" duration-ms="0" started-at="2020-07-31T10:08:53 IST" finished-at="2020-07-31T10:08:53 IST">
+          <exception class="org.testng.TestNGException">
+            <message>
+              <![CDATA[
+Parameter 'userName' is required by @Test on method register but has not been marked @Optional or defined
+in C:\Users\91960\eclipse-workspace\com.FinancialMaganer\dataProvider.xml]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.testng.TestNGException: 
+Parameter 'userName' is required by @Test on method register but has not been marked @Optional or defined
+in C:\Users\91960\eclipse-workspace\com.FinancialMaganer\dataProvider.xml
+at org.testng.internal.Parameters.createParams(Parameters.java:272)
+at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:360)
+at org.testng.internal.Parameters.createParameters(Parameters.java:704)
+at org.testng.internal.Parameters.handleParameters(Parameters.java:879)
+at org.testng.internal.Parameters.handleParameters(Parameters.java:744)
+at org.testng.internal.ParameterHandler.handleParameters(ParameterHandler.java:59)
+at org.testng.internal.ParameterHandler.createParameters(ParameterHandler.java:38)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:783)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.util.ArrayList.forEach(ArrayList.java:1257)
+at org.testng.TestRunner.privateRun(TestRunner.java:766)
+at org.testng.TestRunner.run(TestRunner.java:587)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
+at org.testng.SuiteRunner.run(SuiteRunner.java:286)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1187)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1109)
+at org.testng.TestNG.runSuites(TestNG.java:1039)
+at org.testng.TestNG.run(TestNG.java:1007)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.testng.TestNGException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- register -->
+        <test-method status="PASS" signature="login(java.lang.String, java.lang.String)[pri:1, instance:com.finance.FinancialManager@7e2d773b]" name="login" duration-ms="14034" started-at="2020-07-31T10:08:53 IST" finished-at="2020-07-31T10:09:07 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Dominic]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Xavier]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- login -->
+        <test-method status="PASS" signature="expenses(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:2, instance:com.finance.FinancialManager@7e2d773b]" name="expenses" duration-ms="49447" started-at="2020-07-31T10:09:07 IST" depends-on-methods="com.finance.FinancialManager.login" finished-at="2020-07-31T10:09:57 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[expense]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[3]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Dress;;Food;;Petrol]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[1200;;600;;500]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- expenses -->
+        <test-method status="PASS" signature="app_complete()[pri:0, instance:com.finance.FinancialManager@7e2d773b]" name="app_complete" is-config="true" duration-ms="0" started-at="2020-07-31T10:09:57 IST" finished-at="2020-07-31T10:09:57 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- app_complete -->
+      </class> <!-- com.finance.FinancialManager -->
+    </test> <!-- Login -->
+  </suite> <!-- Financial app -->
+</testng-results>

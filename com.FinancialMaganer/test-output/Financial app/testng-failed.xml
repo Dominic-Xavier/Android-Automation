@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Financial app]">
+  <test thread-count="5" name="Register(failed)">
+    <parameter name="passWord" value="Dominic"/>
+    <parameter name="Repass" value="Dominic"/>
+    <parameter name="Mobile_num" value="9600066074"/>
+    <parameter name="userName" value="Xavier Rocks"/>
+    <classes>
+      <class name="com.finance.FinancialManager">
+        <methods>
+          <include name="login"/>
+          <include name="expenses"/>
+          <include name="app_complete"/>
+          <include name="openApp"/>
+        </methods>
+      </class> <!-- com.finance.FinancialManager -->
+    </classes>
+  </test> <!-- Register(failed) -->
+  <test thread-count="5" name="Login(failed)">
+    <parameter name="Exp_Description" value="Dress;;Food;;Petrol"/>
+    <parameter name="Username" value="Dominic"/>
+    <parameter name="Exp_Amount" value="1200;;600;;500"/>
+    <parameter name="noOfRows" value="3"/>
+    <parameter name="Option" value="expense"/>
+    <parameter name="Password" value="Xavier"/>
+    <classes>
+      <class name="com.finance.FinancialManager">
+        <methods>
+          <include name="register"/>
+          <include name="app_complete"/>
+          <include name="openApp"/>
+        </methods>
+      </class> <!-- com.finance.FinancialManager -->
+    </classes>
+  </test> <!-- Login(failed) -->
+</suite> <!-- Failed suite [Financial app] -->
