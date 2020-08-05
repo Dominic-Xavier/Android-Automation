@@ -5,6 +5,7 @@ import com.elementDetails.Alerts;
 import com.elementDetails.DatabaseElements;
 import com.elementDetails.DisplayDate;
 import com.elementDetails.LoginDetails;
+import com.elementDetails.NavigationView;
 import com.elementDetails.Register;
 
 public class AllOperations {
@@ -68,22 +69,44 @@ public class AllOperations {
 		DisplayDate.startDate().sendKeys(Start_date);
 		DisplayDate.endDate().sendKeys(End_Date);
 		switch(option.toLowerCase()) {
-			case "income":
-				DisplayDate.income().click();
-			break;
-			case "expense":
-				DisplayDate.expense().click();
-			break;
+			case "income":{
+				DisplayDate.income_checkbox().click();
+				Alerts.accept().click();
+				display_close("income");
+				break;
+			}
+			case "expense":{
+				DisplayDate.expense_checkbox().click();
+				Alerts.accept().click();
+				display_close("expense");
+				break;
+			}
+			
 			case "both":{
-				DisplayDate.income().click();
-				DisplayDate.expense().click();
-			break;
+				DisplayDate.income_checkbox().click();
+				DisplayDate.expense_checkbox().click();
+				Alerts.accept().click();
+				display_close("both");
+				break;
 			}
 			default:
 				throw new Exception("Invalid Option...!");
 		}
 		DisplayDate.okButton().click();
 		Thread.sleep(3000);
-		DisplayDate.close_Display_Activity().click();
+		
+	}
+	
+	public static void logOut() {
+		NavigationView.navigationDrawer().click();
+		NavigationView.logout().click();
+		Alerts.accept().click();
+	}
+	
+	public static void display_close(String option) {
+		if(option.equalsIgnoreCase("income") || option.equalsIgnoreCase("expense"))
+			DisplayDate.close_Display_Activity().click();
+		else if(option.equalsIgnoreCase("both"))
+			DisplayDate.close_both().click();
 	}
 }

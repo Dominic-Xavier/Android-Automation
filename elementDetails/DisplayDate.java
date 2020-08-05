@@ -9,11 +9,11 @@ import io.appium.java_client.MobileElement;
 
 public class DisplayDate extends AndroidTestBase {
 	public static MobileElement startDate() {
-		return driver.findElement(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.EditText[1]"));
+		return driver.findElement(By.id("com.myapp.finance:id/start_date"));
 	}
 	
 	public static MobileElement endDate() {
-		return driver.findElement(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.EditText[2]"));
+		return driver.findElement(By.id("com.myapp.finance:id/end_date"));
 	}
 	
 	public static MobileElement canncel() {
@@ -28,11 +28,11 @@ public class DisplayDate extends AndroidTestBase {
 		return driver.findElement(By.id("com.myapp.finance:id/cl")); 
 	}
 	
-	public static MobileElement income() {
+	public static MobileElement income_checkbox() {
 		return driver.findElement(By.id("com.myapp.finance:id/income_check_box"));
 	}
 	
-	public static MobileElement expense() {
+	public static MobileElement expense_checkbox() {
 		return driver.findElement(By.id("com.myapp.finance:id/expense_check_box"));
 	}
 	
@@ -41,10 +41,6 @@ public class DisplayDate extends AndroidTestBase {
 	}
 	
 	public static MobileElement close_both() {
-		return driver.findElement(By.id("com.myapp.finance:id/quit"));
-	}
-	
-	public static MobileElement expenseTab() {
 		return driver.findElement(By.id("com.myapp.finance:id/quit"));
 	}
 	

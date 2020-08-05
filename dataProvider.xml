@@ -1,21 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
-<suite name = "Financial app">
+<suite name = "Financial app" verbose="5">
 
-	<test name = "Financial Manager" enabled = "true">
+	<listeners>
+		<listener class-name = "com.retry.FailedTestCase.Transformer"/>
+	</listeners>
+	<test name = "inserting data" enabled = "true">
 	<parameter name = "Username" value = "Dominic"/>
 	<parameter name = "Password" value = "Xavier"/>
 	<parameter name = "userName" value = "Xavier Rocks"/>
 	<parameter name = "passWord" value = "Dominic"/>
 	<parameter name = "Repass" value = "Dominic"/>
 	<parameter name = "Mobile_num" value = "9600066074"/>
-	<parameter name="Option" value="expense"/>
+	<parameter name = "Option" value="expense"/>
 	<parameter name = "noOfRows" value = "3"/>
-	<parameter name = "Exp_Description" value = "Dress;;Food;;Petrol"/>
-	<parameter name = "Exp_Amount" value = "1200;;600;;500"/>
+	<parameter name = "Description" value = "Dress;;Food;;Petrol"/>
+	<parameter name = "Amount" value = "1200;;600;;500"/>
+	<parameter name = "inc_Option" value="income"/>
+	<parameter name = "noOfRows" value = "3"/>
+	<parameter name = "Inc_Description" value = "Salary;;Pension;;Labour"/>
+	<parameter name = "Inc_Amount" value = "1200;;600;;500"/>
+	<parameter name = "date" value = "01-01-2020;;30-08-2020"/>
+	<parameter name = "display_option" value = "Expense;;Income;;Both"/>
 		<classes>
 			<class name = "com.finance.FinancialManager"/>
 		</classes>
-		
 	</test>
 </suite>

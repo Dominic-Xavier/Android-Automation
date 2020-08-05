@@ -10,6 +10,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.elementDetails.Alerts;
+import com.elementDetails.LoginDetails;
 
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.android.AndroidDriver;
@@ -49,6 +50,11 @@ public class AndroidTestBase {
 		WebDriverWait wait = new WebDriverWait(driver, SECONDS);
 		wait.until(ExpectedConditions.visibilityOf(ele));
 		return wait;
+	}
+	
+	public static void close_App() {
+		LoginDetails.closeButton().click();
+		Alerts.accept().click();
 	}
 }
 		
