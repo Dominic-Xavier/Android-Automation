@@ -2,9 +2,9 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
 <suite name = "Financial app" verbose="5">
 
-	<listeners>
+	<!-- <listeners>
 		<listener class-name = "com.retry.FailedTestCase.Transformer"/>
-	</listeners>
+	</listeners> -->
 	<test name = "inserting data" enabled = "true">
 	<parameter name = "Username" value = "Dominic"/>
 	<parameter name = "Password" value = "Xavier"/>
@@ -21,7 +21,7 @@
 	<parameter name = "Inc_Description" value = "Salary;;Pension;;Labour"/>
 	<parameter name = "Inc_Amount" value = "1200;;600;;500"/>
 	<parameter name = "date" value = "01-01-2020;;30-08-2020"/>
-	<parameter name = "display_option" value = "Expense;;Income;;Both"/>
+	<parameter name = "display_option" value = "Expense;;Income;;both"/>
 		<classes>
 			<class name = "com.finance.FinancialManager"/>
 		</classes>
