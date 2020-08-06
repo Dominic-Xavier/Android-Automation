@@ -9,28 +9,12 @@
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
 <tr><th colspan="8">Financial app</th></tr>
-<tr><td><a href="#t0">Register</a></td><td class="num">1</td><td class="num attn">1</td><td class="num">0</td><td class="num attn">1</td><td class="num">41,588</td><td></td><td></td></tr>
-<tr class="stripe"><td><a href="#t1">Login</a></td><td class="num">2</td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">70,868</td><td></td><td></td></tr>
-<tr><th>Total</th><th class="num">3</th><th class="num attn">1</th><th class="num">0</th><th class="num attn">2</th><th class="num">112,456</th><th colspan="2"></th></tr>
+<tr><td><a href="#t0">inserting data</a></td><td class="num">3</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">258,213</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Financial app</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Register &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">com.finance.FinancialManager</td><td><a href="#m0">login</a></td><td rowspan="1">1596170326318</td><td rowspan="1">0</td></tr><tr><th colspan="4">Register &#8212; skipped</th></tr><tr class="skippedeven"><td rowspan="1">com.finance.FinancialManager</td><td><a href="#m1">expenses</a></td><td rowspan="1">1596170326331</td><td rowspan="1">0</td></tr><tr><th colspan="4">Register &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">com.finance.FinancialManager</td><td><a href="#m2">register</a></td><td rowspan="1">1596170292008</td><td rowspan="1">34294</td></tr></tbody>
-<tbody id="t1"><tr><th colspan="4">Login &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">com.finance.FinancialManager</td><td><a href="#m3">register</a></td><td rowspan="1">1596170333728</td><td rowspan="1">0</td></tr><tr><th colspan="4">Login &#8212; passed</th></tr><tr class="passedeven"><td rowspan="2">com.finance.FinancialManager</td><td><a href="#m4">expenses</a></td><td rowspan="1">1596170347765</td><td rowspan="1">49447</td></tr><tr class="passedeven"><td><a href="#m5">login</a></td><td rowspan="1">1596170333731</td><td rowspan="1">14034</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Financial app</th></tr></tbody><tbody id="t0"><tr><th colspan="4">inserting data &#8212; passed</th></tr><tr class="passedeven"><td rowspan="3">com.finance.FinancialManager</td><td><a href="#m0">expenses</a></td><td rowspan="1">1596704772640</td><td rowspan="1">51619</td></tr><tr class="passedeven"><td><a href="#m1">income</a></td><td rowspan="1">1596704855971</td><td rowspan="1">52577</td></tr><tr class="passedeven"><td><a href="#m2">show_date</a></td><td rowspan="1">1596704940089</td><td rowspan="1">57922</td></tr></tbody>
 </table>
-<h2>Register</h2><h3 id="m0">com.finance.FinancialManager#login</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.testng.TestNGException: 
-Parameter &apos;Username&apos; is required by @Test on method login but has not been marked @Optional or defined
-in C:\Users\91960\eclipse-workspace\com.FinancialMaganer\dataProvider.xml
-	at java.util.ArrayList.forEach(ArrayList.java:1257)
-... Removed 26 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m1">com.finance.FinancialManager#expenses</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.Throwable: Method FinancialManager.expenses(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:2, instance:com.finance.FinancialManager@536aaa8d] depends on not successfully finished methods
-	at java.util.ArrayList.forEach(ArrayList.java:1257)
-... Removed 18 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m2">com.finance.FinancialManager#register</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th><th>Parameter #4</th></tr><tr class="param stripe"><td>Xavier Rocks</td><td>Dominic</td><td>Dominic</td><td>9600066074</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h2>Login</h2><h3 id="m3">com.finance.FinancialManager#register</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.testng.TestNGException: 
-Parameter &apos;userName&apos; is required by @Test on method register but has not been marked @Optional or defined
-in C:\Users\91960\eclipse-workspace\com.FinancialMaganer\dataProvider.xml
-	at java.util.ArrayList.forEach(ArrayList.java:1257)
-... Removed 26 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m4">com.finance.FinancialManager#expenses</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th><th>Parameter #4</th></tr><tr class="param stripe"><td>expense</td><td>3</td><td>Dress;;Food;;Petrol</td><td>1200;;600;;500</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m5">com.finance.FinancialManager#login</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>Dominic</td><td>Xavier</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>inserting data</h2><h3 id="m0">com.finance.FinancialManager#expenses</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th><th>Parameter #4</th></tr><tr class="param stripe"><td>expense</td><td>3</td><td>Dress;;Food;;Petrol</td><td>1200;;600;;500</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m1">com.finance.FinancialManager#income</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th><th>Parameter #4</th></tr><tr class="param stripe"><td>income</td><td>3</td><td>Salary;;Pension;;Labour</td><td>1200;;600;;500</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m2">com.finance.FinancialManager#show_date</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>01-01-2020;;30-08-2020</td><td>Expense;;Income;;both</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>

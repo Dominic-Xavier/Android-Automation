@@ -24,7 +24,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite, 2 failed tests</span>
+      <span class="top-banner-font-1">1 suite</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -38,7 +38,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" class="navigator-link" panel-name="suite-Financial_app">
-              <span class="suite-name border-failed">Financial app</span>
+              <span class="suite-name border-passed">Financial app</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -49,12 +49,12 @@
               <ul>
                 <li>
                   <a href="#" class="navigator-link " panel-name="test-xml-Financial_app">
-                    <span>C:\Users\91960\eclipse-workspace\com.FinancialMaganer\dataProvider.xml</span>
+                    <span>C:\Users\91960\git\repository\com.FinancialMaganer\dataProvider.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
                   <a href="#" class="navigator-link " panel-name="testlist-Financial_app">
-                    <span class="test-stats">2 tests</span>
+                    <span class="test-stats">1 test</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -91,40 +91,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">6 methods, 2 failed,  1 skipped,  3 passed</span>
-                  </li>
-                  <li>
-                    <span class="method-list-title failed">Failed methods</span>
-                    <span class="show-or-hide-methods failed">
-                      <a href="#" panel-name="suite-Financial_app" class="hide-methods failed suite-Financial_app"> (hide)</a> <!-- hide-methods failed suite-Financial_app -->
-                      <a href="#" panel-name="suite-Financial_app" class="show-methods failed suite-Financial_app"> (show)</a> <!-- show-methods failed suite-Financial_app -->
-                    </span>
-                    <div class="method-list-content failed suite-Financial_app">
-                      <span>
-                        <img width="3%" src="failed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Financial_app" title="com.finance.FinancialManager" hash-for-method="login">login</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img width="3%" src="failed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Financial_app" title="com.finance.FinancialManager" hash-for-method="register">register</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                    </div> <!-- method-list-content failed suite-Financial_app -->
-                  </li>
-                  <li>
-                    <span class="method-list-title skipped">Skipped methods</span>
-                    <span class="show-or-hide-methods skipped">
-                      <a href="#" panel-name="suite-Financial_app" class="hide-methods skipped suite-Financial_app"> (hide)</a> <!-- hide-methods skipped suite-Financial_app -->
-                      <a href="#" panel-name="suite-Financial_app" class="show-methods skipped suite-Financial_app"> (show)</a> <!-- show-methods skipped suite-Financial_app -->
-                    </span>
-                    <div class="method-list-content skipped suite-Financial_app">
-                      <span>
-                        <img width="3%" src="skipped.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Financial_app" title="com.finance.FinancialManager" hash-for-method="expenses">expenses</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                    </div> <!-- method-list-content skipped suite-Financial_app -->
+                    <span class="method-stats">3 methods,   3 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -140,12 +107,12 @@
                       <br/>
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Financial_app" title="com.finance.FinancialManager" hash-for-method="login(Dominic, Xavier)">login(Dominic, Xavier)</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Financial_app" title="com.finance.FinancialManager" hash-for-method="income(income, 3, Salary;;Pension;;Labour, 1200;;600;;500)">income(income, 3, Salary;;Pension;;Labour, 1200;;600;;500)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Financial_app" title="com.finance.FinancialManager" hash-for-method="register(Xavier Rocks, Dominic, Dominic, 9600066074)">register(Xavier Rocks, Dominic, Dominic, 9600066074)</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Financial_app" title="com.finance.FinancialManager" hash-for-method="show_date(01-01-2020;;30-08-2020, Expense;;Income;;both)">show_date(01-01-2020;;30-08-2020, Expense;;Income;;both)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Financial_app -->
@@ -160,59 +127,6 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Financial_app" class="panel Financial_app">
-          <div class="suite-Financial_app-class-failed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="failed.png"/>
-              <span class="class-name">com.finance.FinancialManager</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="login">
-                  </a> <!-- login -->
-                  <span class="method-name">login</span>
-                  <div class="stack-trace">org.testng.TestNGException: 
-Parameter &apos;Username&apos; is required by @Test on method login but has not been marked @Optional or defined
-in C:\Users\91960\eclipse-workspace\com.FinancialMaganer\dataProvider.xml
-	at java.util.ArrayList.forEach(ArrayList.java:1257)
-... Removed 26 stack frames
-</div> <!-- stack-trace -->
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="register">
-                  </a> <!-- register -->
-                  <span class="method-name">register</span>
-                  <div class="stack-trace">org.testng.TestNGException: 
-Parameter &apos;userName&apos; is required by @Test on method register but has not been marked @Optional or defined
-in C:\Users\91960\eclipse-workspace\com.FinancialMaganer\dataProvider.xml
-	at java.util.ArrayList.forEach(ArrayList.java:1257)
-... Removed 26 stack frames
-</div> <!-- stack-trace -->
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Financial_app-class-failed -->
-          <div class="suite-Financial_app-class-skipped">
-            <div class="main-panel-header rounded-window-top">
-              <img src="skipped.png"/>
-              <span class="class-name">com.finance.FinancialManager</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="expenses">
-                  </a> <!-- expenses -->
-                  <span class="method-name">expenses</span>
-                  <div class="stack-trace">java.lang.Throwable: Method FinancialManager.expenses(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:2, instance:com.finance.FinancialManager@536aaa8d] depends on not successfully finished methods
-	at java.util.ArrayList.forEach(ArrayList.java:1257)
-... Removed 18 stack frames
-</div> <!-- stack-trace -->
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Financial_app-class-skipped -->
           <div class="suite-Financial_app-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
@@ -229,18 +143,18 @@ in C:\Users\91960\eclipse-workspace\com.FinancialMaganer\dataProvider.xml
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="login(Dominic, Xavier)">
-                  </a> <!-- login(Dominic, Xavier) -->
-                  <span class="method-name">login</span>
-                  <span class="parameters">(Dominic, Xavier)</span>
+                  <a name="income(income, 3, Salary;;Pension;;Labour, 1200;;600;;500)">
+                  </a> <!-- income(income, 3, Salary;;Pension;;Labour, 1200;;600;;500) -->
+                  <span class="method-name">income</span>
+                  <span class="parameters">(income, 3, Salary;;Pension;;Labour, 1200;;600;;500)</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="register(Xavier Rocks, Dominic, Dominic, 9600066074)">
-                  </a> <!-- register(Xavier Rocks, Dominic, Dominic, 9600066074) -->
-                  <span class="method-name">register</span>
-                  <span class="parameters">(Xavier Rocks, Dominic, Dominic, 9600066074)</span>
+                  <a name="show_date(01-01-2020;;30-08-2020, Expense;;Income;;both)">
+                  </a> <!-- show_date(01-01-2020;;30-08-2020, Expense;;Income;;both) -->
+                  <span class="method-name">show_date</span>
+                  <span class="parameters">(01-01-2020;;30-08-2020, Expense;;Income;;both)</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -248,33 +162,33 @@ in C:\Users\91960\eclipse-workspace\com.FinancialMaganer\dataProvider.xml
         </div> <!-- panel Financial_app -->
         <div panel-name="test-xml-Financial_app" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\91960\eclipse-workspace\com.FinancialMaganer\dataProvider.xml</span>
+            <span class="header-content">C:\Users\91960\git\repository\com.FinancialMaganer\dataProvider.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE suite SYSTEM &quot;https://testng.org/testng-1.0.dtd&quot;&gt;
-&lt;suite guice-stage=&quot;DEVELOPMENT&quot; name=&quot;Financial app&quot;&gt;
-  &lt;test thread-count=&quot;5&quot; name=&quot;Register&quot;&gt;
+&lt;suite guice-stage=&quot;DEVELOPMENT&quot; verbose=&quot;5&quot; name=&quot;Financial app&quot;&gt;
+  &lt;test thread-count=&quot;5&quot; verbose=&quot;5&quot; name=&quot;inserting data&quot;&gt;
     &lt;parameter name=&quot;passWord&quot; value=&quot;Dominic&quot;/&gt;
-    &lt;parameter name=&quot;Repass&quot; value=&quot;Dominic&quot;/&gt;
+    &lt;parameter name=&quot;date&quot; value=&quot;01-01-2020;;30-08-2020&quot;/&gt;
+    &lt;parameter name=&quot;Description&quot; value=&quot;Dress;;Food;;Petrol&quot;/&gt;
     &lt;parameter name=&quot;Mobile_num&quot; value=&quot;9600066074&quot;/&gt;
+    &lt;parameter name=&quot;Inc_Amount&quot; value=&quot;1200;;600;;500&quot;/&gt;
+    &lt;parameter name=&quot;Amount&quot; value=&quot;1200;;600;;500&quot;/&gt;
     &lt;parameter name=&quot;userName&quot; value=&quot;Xavier Rocks&quot;/&gt;
-    &lt;classes&gt;
-      &lt;class name=&quot;com.finance.FinancialManager&quot;/&gt;
-    &lt;/classes&gt;
-  &lt;/test&gt; &lt;!-- Register --&gt;
-  &lt;test thread-count=&quot;5&quot; name=&quot;Login&quot;&gt;
-    &lt;parameter name=&quot;Exp_Description&quot; value=&quot;Dress;;Food;;Petrol&quot;/&gt;
+    &lt;parameter name=&quot;inc_Option&quot; value=&quot;income&quot;/&gt;
+    &lt;parameter name=&quot;Inc_Description&quot; value=&quot;Salary;;Pension;;Labour&quot;/&gt;
     &lt;parameter name=&quot;Username&quot; value=&quot;Dominic&quot;/&gt;
-    &lt;parameter name=&quot;Exp_Amount&quot; value=&quot;1200;;600;;500&quot;/&gt;
+    &lt;parameter name=&quot;Repass&quot; value=&quot;Dominic&quot;/&gt;
     &lt;parameter name=&quot;noOfRows&quot; value=&quot;3&quot;/&gt;
     &lt;parameter name=&quot;Option&quot; value=&quot;expense&quot;/&gt;
+    &lt;parameter name=&quot;display_option&quot; value=&quot;Expense;;Income;;both&quot;/&gt;
     &lt;parameter name=&quot;Password&quot; value=&quot;Xavier&quot;/&gt;
     &lt;classes&gt;
       &lt;class name=&quot;com.finance.FinancialManager&quot;/&gt;
     &lt;/classes&gt;
-  &lt;/test&gt; &lt;!-- Login --&gt;
+  &lt;/test&gt; &lt;!-- inserting data --&gt;
 &lt;/suite&gt; &lt;!-- Financial app --&gt;
             </pre>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -286,10 +200,7 @@ in C:\Users\91960\eclipse-workspace\com.FinancialMaganer\dataProvider.xml
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">Register (1 class)</span>
-              </li>
-              <li>
-                <span class="test-name">Login (1 class)</span>
+                <span class="test-name">inserting data (1 class)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -315,36 +226,24 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(6);
+data.addRows(3);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'expenses')
+data.setCell(0, 1, 'show_date')
 data.setCell(0, 2, 'com.finance.FinancialManager')
-data.setCell(0, 3, 49447);
+data.setCell(0, 3, 57922);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'register')
+data.setCell(1, 1, 'income')
 data.setCell(1, 2, 'com.finance.FinancialManager')
-data.setCell(1, 3, 34294);
+data.setCell(1, 3, 52577);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'login')
+data.setCell(2, 1, 'expenses')
 data.setCell(2, 2, 'com.finance.FinancialManager')
-data.setCell(2, 3, 14034);
-data.setCell(3, 0, 3)
-data.setCell(3, 1, 'login')
-data.setCell(3, 2, 'com.finance.FinancialManager')
-data.setCell(3, 3, 0);
-data.setCell(4, 0, 4)
-data.setCell(4, 1, 'expenses')
-data.setCell(4, 2, 'com.finance.FinancialManager')
-data.setCell(4, 3, 0);
-data.setCell(5, 0, 5)
-data.setCell(5, 1, 'register')
-data.setCell(5, 2, 'com.finance.FinancialManager')
-data.setCell(5, 3, 0);
+data.setCell(2, 3, 51619);
 window.suiteTableData['Financial_app']= { tableData: data, tableDiv: 'times-div-Financial_app'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 1 minutes</span>
+              <span class="suite-total-time">Total running time: 2 minutes</span>
               <div id="times-div-Financial_app">
               </div> <!-- times-div-Financial_app -->
             </div> <!-- times-div -->
@@ -359,9 +258,18 @@ return data;
         </div> <!-- panel -->
         <div panel-name="ignored-methods-Financial_app" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">0 ignored methods</span>
+            <span class="header-content">2 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">com.finance.FinancialManager</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">register</span>
+                <br/>
+                <span class="ignored-method-name">navigation</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
         <div panel-name="chronological-Financial_app" class="panel">
@@ -371,37 +279,45 @@ return data;
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
               <div class="chronological-class-name">com.finance.FinancialManager</div> <!-- chronological-class-name -->
-              <div class="configuration-class before">
-                <span class="method-name">openApp</span>
-                <span class="method-start">0 ms</span>
-              </div> <!-- configuration-class before -->
-              <div class="test-method">
-                <span class="method-name">register(Xavier Rocks, Dominic, Dominic, 9600066074)</span>
-                <span class="method-start">7230 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">expenses</span>
-                <span class="method-start">41553 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-class after">
-                <span class="method-name">app_complete</span>
-                <span class="method-start">41557 ms</span>
-              </div> <!-- configuration-class after -->
-              <div class="configuration-class before">
-                <span class="method-name">openApp</span>
-                <span class="method-start">41582 ms</span>
-              </div> <!-- configuration-class before -->
-              <div class="test-method">
+              <div class="configuration-method before">
                 <span class="method-name">login(Dominic, Xavier)</span>
-                <span class="method-start">48953 ms</span>
-              </div> <!-- test-method -->
+                <span class="method-start">0 ms</span>
+              </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">expenses(expense, 3, Dress;;Food;;Petrol, 1200;;600;;500)</span>
-                <span class="method-start">62987 ms</span>
+                <span class="method-start">22546 ms</span>
               </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">logout</span>
+                <span class="method-start">74169 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">login(Dominic, Xavier)</span>
+                <span class="method-start">84518 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">income(income, 3, Salary;;Pension;;Labour, 1200;;600;;500)</span>
+                <span class="method-start">105877 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">logout</span>
+                <span class="method-start">158455 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">login(Dominic, Xavier)</span>
+                <span class="method-start">168835 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">show_date(01-01-2020;;30-08-2020, Expense;;Income;;both)</span>
+                <span class="method-start">189995 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">logout</span>
+                <span class="method-start">247918 ms</span>
+              </div> <!-- configuration-method after -->
               <div class="configuration-class after">
                 <span class="method-name">app_complete</span>
-                <span class="method-start">112450 ms</span>
+                <span class="method-start">258182 ms</span>
               </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

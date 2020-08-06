@@ -1,37 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [Financial app]">
-  <test thread-count="5" name="Register(failed)">
+<suite guice-stage="DEVELOPMENT" verbose="5" name="Failed suite [Financial app]">
+  <test thread-count="5" verbose="5" name="inserting data(failed)">
     <parameter name="passWord" value="Dominic"/>
-    <parameter name="Repass" value="Dominic"/>
+    <parameter name="date" value="01-01-2020;;30-08-2020"/>
+    <parameter name="Description" value="Dress;;Food;;Petrol"/>
     <parameter name="Mobile_num" value="9600066074"/>
+    <parameter name="Inc_Amount" value="1200;;600;;500"/>
+    <parameter name="Amount" value="1200;;600;;500"/>
     <parameter name="userName" value="Xavier Rocks"/>
-    <classes>
-      <class name="com.finance.FinancialManager">
-        <methods>
-          <include name="login"/>
-          <include name="expenses"/>
-          <include name="app_complete"/>
-          <include name="openApp"/>
-        </methods>
-      </class> <!-- com.finance.FinancialManager -->
-    </classes>
-  </test> <!-- Register(failed) -->
-  <test thread-count="5" name="Login(failed)">
-    <parameter name="Exp_Description" value="Dress;;Food;;Petrol"/>
+    <parameter name="inc_Option" value="income"/>
+    <parameter name="Inc_Description" value="Salary;;Pension;;Labour"/>
     <parameter name="Username" value="Dominic"/>
-    <parameter name="Exp_Amount" value="1200;;600;;500"/>
+    <parameter name="Repass" value="Dominic"/>
     <parameter name="noOfRows" value="3"/>
     <parameter name="Option" value="expense"/>
+    <parameter name="display_option" value="Expense;;Income;;both"/>
     <parameter name="Password" value="Xavier"/>
     <classes>
       <class name="com.finance.FinancialManager">
         <methods>
-          <include name="register"/>
+          <include name="login"/>
+          <include name="logout"/>
+          <include name="expenses" invocation-numbers="0"/>
           <include name="app_complete"/>
-          <include name="openApp"/>
+          <include name="income" invocation-numbers="0"/>
         </methods>
       </class> <!-- com.finance.FinancialManager -->
     </classes>
-  </test> <!-- Login(failed) -->
+  </test> <!-- inserting data(failed) -->
 </suite> <!-- Failed suite [Financial app] -->
