@@ -39,7 +39,7 @@ public class AndroidTestBase {
 	
 	public static boolean aletButtonCheck() {
 		try {
-			Alerts.accept().click();
+			Alerts.accept();
 			return true;
 		}
 		catch(Exception e) {
@@ -55,13 +55,13 @@ public class AndroidTestBase {
 	
 	public static void close_App() {
 		LoginDetails.closeButton().click();
-		Alerts.accept().click();
+		Alerts.accept();
 	}
 	
 	public static void logOut() {
 		NavigationView.navigationDrawer().click();
 		NavigationView.logout().click();
-		Alerts.accept().click();
+		Alerts.accept();
 	}
 }
 		

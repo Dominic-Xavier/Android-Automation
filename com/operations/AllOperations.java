@@ -5,10 +5,16 @@ import com.elementDetails.Alerts;
 import com.elementDetails.DatabaseElements;
 import com.elementDetails.DisplayDate;
 import com.elementDetails.LoginDetails;
+import com.elementDetails.NavigationView;
 import com.elementDetails.Register;
+import com.elementDetails.Transactions;
+import com.elementDetails.UserAccountDetails;
+
 
 public class AllOperations {
 	static int rowCount = 0;
+	int expense_amount;
+	int total_value;
 	public static void login(String username,String password) {
 		LoginDetails.userName().sendKeys(username);
 		LoginDetails.passWord().sendKeys(password);
@@ -55,7 +61,7 @@ public class AllOperations {
 			position++;
 		}
 		DatabaseElements.saveData().click();
-		Alerts.accept().click();
+		Alerts.accept();
 	}
 	
 	public static void delete_row() {
@@ -91,11 +97,63 @@ public class AllOperations {
 	}
 	
 	public static void display_close(String option) throws InterruptedException {
-		Alerts.accept().click();
+		Alerts.accept();
 		Thread.sleep(3000);
 		if(option.equalsIgnoreCase("income") || option.equalsIgnoreCase("expense"))
 			DisplayDate.close_Display_Activity().click();
 		else if(option.equalsIgnoreCase("both"))
 			DisplayDate.close_both().click();
+	}
+	
+	public static boolean validate_number(String Mobile_number) {
+		//NavigationView.navigationDrawer().click();
+		//NavigationView.myAccount().click();
+		AndroidTestBase.expWait(2, UserAccountDetails.mobileNumber());
+		String Mobilenumber = UserAccountDetails.mobileNumber().getText();
+		if(Mobile_number.equals(Mobilenumber)) {
+			UserAccountDetails.close().click();
+			return true;
+		}
+		else {
+			UserAccountDetails.close().click();
+			return false;
+		}
+	}
+	
+	public static void allTransactions() throws InterruptedException {
+		NavigationView.navigationDrawer().click();
+		NavigationView.totalExpense().click();
+		Thread.sleep(2000);
+		Transactions.close().click();
+	}
+	
+	public static void displaydata(String option, String date) throws Exception {
+		String dates[] = date.split(";;");
+		  String options[] = option.split(";;");
+		  for(int i=0;i<options.length;i++) {
+			  AllOperations.display(dates[0], dates[1], options[i]);
+		  }
+	}
+	
+	public static void myaccount() {
+		NavigationView.navigationDrawer().click();
+		NavigationView.myAccount().click();
+	}
+	
+	public static void user_Transactions(String inc_Option,String noOfRows,String Description,String Amount) throws Exception {
+		AllOperations.add_row(Integer.parseInt(noOfRows));
+		  String desc[] = Description.split(";;");
+		  String Amt[] = Amount.split(";;");
+		  AllOperations.insert_data(inc_Option,desc,Amt);
+		  AllOperations.delete_row();
+	}
+	
+	public int user_expense_amount(String total_amount) {
+		String expense_Amount[] = total_amount.split(";;");
+		for (String expense : expense_Amount) {
+			int amount = Integer.parseInt(expense);
+			expense_amount += amount;
+		}
+		return expense_amount;
 	}
 }

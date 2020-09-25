@@ -9,38 +9,38 @@ import io.appium.java_client.MobileElement;
 
 public class DisplayDate extends AndroidTestBase {
 	public static MobileElement startDate() {
-		return driver.findElement(By.id("com.myapp.finance:id/start_date"));
+		return (MobileElement) driver.findElement(By.id("com.myapp.finance:id/start_date"));
 	}
 	
 	public static MobileElement endDate() {
-		return driver.findElement(By.id("com.myapp.finance:id/end_date"));
+		return (MobileElement) driver.findElement(By.id("com.myapp.finance:id/end_date"));
 	}
 	
 	public static MobileElement close() {
-		return driver.findElement(By.id("com.myapp.finance:id/cl")); 
+		return (MobileElement) driver.findElement(By.id("com.myapp.finance:id/cl")); 
 	}
 	
 	public static MobileElement income_checkbox() {
-		return driver.findElement(By.id("com.myapp.finance:id/income_check_box"));
+		return (MobileElement) driver.findElement(By.id("com.myapp.finance:id/income_check_box"));
 	}
 	
 	public static MobileElement expense_checkbox() {
-		return driver.findElement(By.id("com.myapp.finance:id/expense_check_box"));
+		return (MobileElement) driver.findElement(By.id("com.myapp.finance:id/expense_check_box"));
 	}
 	
 	public static MobileElement close_Display_Activity() {
-		return driver.findElement(By.id("com.myapp.finance:id/cl"));
+		return (MobileElement) driver.findElement(By.id("com.myapp.finance:id/cl"));
 	}
 	
 	public static MobileElement close_both() {
-		return driver.findElement(By.id("com.myapp.finance:id/quit"));
+		return (MobileElement) driver.findElement(By.id("com.myapp.finance:id/quit"));
 	}
 	
 	public static MobileElement incomeTab() {
-		return driver.findElement(MobileBy.AccessibilityId("Income"));
+		return (MobileElement) driver.findElement(MobileBy.AccessibilityId("Income"));
 	}
 	
 	public static MobileElement ExpenseTab() {
-		return driver.findElement(MobileBy.AccessibilityId("Expense"));
+		return (MobileElement) driver.findElement(MobileBy.AccessibilityId("Expense"));
 	}
 }

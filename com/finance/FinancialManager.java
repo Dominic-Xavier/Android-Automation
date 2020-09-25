@@ -1,20 +1,22 @@
 package com.finance;
 
 import java.net.MalformedURLException;
-
-import org.testng.annotations.AfterClass;
+import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 import com.android.AndroidTestBase;
-import com.elementDetails.DatabaseElements;
-import com.elementDetails.DisplayDate;
 import com.operations.AllOperations;
 
+import cucumber.api.java.en.And;
+
+//@Listeners(com.testNgListener.TestNGListeer.class)
 public class FinancialManager {
+	
+		boolean check_Mobile_Number;
 	  
 	  @BeforeMethod()
 	  @Parameters({"Username","Password"})
@@ -24,7 +26,7 @@ public class FinancialManager {
 		  AllOperations.login(Username, Password);
 	  }
 	  
-	  @Test(priority = 2, enabled = true)
+	  @Test
 	  @Parameters({"Option","noOfRows","Description","Amount"})
 	  public void expenses(String Option,String noOfRows,String Description,String Amount) throws Exception {
 		  AllOperations.add_row(Integer.parseInt(noOfRows));
@@ -35,8 +37,7 @@ public class FinancialManager {
 	  }
 	  
 	  
-	  
-	  @Test(priority = 3,enabled = true)
+	  @Test
 	  @Parameters({"inc_Option","noOfRows","Inc_Description","Inc_Amount"})
 	  public void income(String inc_Option,String noOfRows,String Inc_Description,String Inc_Amount) throws Exception {
 		  AllOperations.add_row(Integer.parseInt(noOfRows));
@@ -46,7 +47,7 @@ public class FinancialManager {
 		  AllOperations.delete_row();
 	  }
 	  
-	  @Test(priority = 4)
+	  @Test
 	  @Parameters({"date","display_option"})
 	  public void show_date(String date,String option) throws Exception {
 		  String dates[] = date.split(";;");
@@ -56,15 +57,22 @@ public class FinancialManager {
 		  }
 	  }
 	  
-	  @Test(priority = -1,enabled = false)
+	  @Test
 	  @Parameters({"userName","passWord","Repass","Mobile_num"})
 	  public void register(String username,String password,String repassword,String mobile_number){
 		  AllOperations.register(username, password, repassword, mobile_number);
 	  }
 	  
-	  @Test(enabled = false)
-	  public void navigation() {
-		  
+	  @Test
+	  @Parameters({"Mobile_num"})
+	  public void Account_details(String registerMobileNumber) {
+		  check_Mobile_Number = AllOperations.validate_number(registerMobileNumber);
+		  Assert.assertEquals(check_Mobile_Number, true);
+	  }
+	  
+	  @Test
+	  public void total_Transactions() throws InterruptedException {
+		  AllOperations.allTransactions();
 	  }
 	  
 	  @AfterMethod()
@@ -73,9 +81,4 @@ public class FinancialManager {
 		  AndroidTestBase.close_App();
 	  }
 	  
-	  
-	  @AfterClass()
-	  public void app_complete() {
-		  System.err.println("App Cpmpleted...!");
-	  }
 }
