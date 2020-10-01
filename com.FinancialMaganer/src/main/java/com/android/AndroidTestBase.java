@@ -10,12 +10,14 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.elementDetails.Alerts;
+import com.elementDetails.LoginDetails;
+import com.elementDetails.NavigationView;
 
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.android.AndroidDriver;
 
 public class AndroidTestBase {
-	public static WebDriver driver;
+	public static AndroidDriver<MobileElement> driver;
 	public static void setUp() throws MalformedURLException {
 		DesiredCapabilities cap = new DesiredCapabilities();
 		cap.setCapability("deviceName", "vivo 1951");
@@ -37,7 +39,7 @@ public class AndroidTestBase {
 	
 	public static boolean aletButtonCheck() {
 		try {
-			Alerts.accept().click();
+			Alerts.accept();
 			return true;
 		}
 		catch(Exception e) {
@@ -49,6 +51,17 @@ public class AndroidTestBase {
 		WebDriverWait wait = new WebDriverWait(driver, SECONDS);
 		wait.until(ExpectedConditions.visibilityOf(ele));
 		return wait;
+	}
+	
+	public static void close_App() {
+		LoginDetails.closeButton().click();
+		Alerts.accept();
+	}
+	
+	public static void logOut() {
+		NavigationView.navigationDrawer().click();
+		NavigationView.logout().click();
+		Alerts.accept();
 	}
 }
 		
